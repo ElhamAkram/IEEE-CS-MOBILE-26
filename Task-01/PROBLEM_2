@@ -1,0 +1,6 @@
+void main() {
+String numberS="50.3";
+double numberD =double.parse(numberS);
+int numberI =numberD.toInt();
+print("string is $numberS \ndouble is $numberD \nint is $numberI");
+}
