@@ -1,0 +1,5 @@
+void main() {
+var celsius = 10;
+var fahrenheit = celsius * 9/5 + 32;
+print ("Celsius is $celsius c\nFahrenheit $fahrenheit f" ) ;
+}
