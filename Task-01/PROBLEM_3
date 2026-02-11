@@ -1,0 +1,10 @@
+void main() {
+  String first = "Hello";
+  String second = "World";
+  String state = first + " " + second;
+  int length = state.length;
+  String sub = state.substring(0, 5);
+  String upper = state.toUpperCase();
+  String lower = state.toLowerCase();
+  print("First String: $first \nSecond String: $second \nConcatenated: $state \nLength: $length \nSubstring: $sub \nUppercase: $upper \nLowercase: $lower");
+}
