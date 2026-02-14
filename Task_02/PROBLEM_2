@@ -1,0 +1,12 @@
+import 'dart:io';
+void main() {
+  stdout.write("Enter a string: ");
+  String text = stdin.readLineSync()!;
+  int length = text.length;
+  int middle = length ~/ 2;
+  if (length % 2 == 0) {
+    print(text.substring(middle - 1, middle + 1));
+  } else {
+    print(text.substring(middle, middle + 1));
+  }
+}
