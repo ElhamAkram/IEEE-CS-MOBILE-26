@@ -1,0 +1,26 @@
+int dblLinear(int n) {
+  List<int> u = [1];
+  int i = 0; 
+  int j = 0; 
+  while (u.length <= n) {
+    int y = 2 * u[i] + 1;
+    int z = 3 * u[j] + 1;
+    int next;
+    if (y < z) {
+      next = y;
+      i++;
+    } else if (z < y) {
+      next = z;
+      j++;
+    } else {
+      next = y;
+      i++;
+      j++;
+    }
+    u.add(next);
+  }
+  return u[n];
+}
+void main() {
+  print(dblLinear(10)) ;
+}
