@@ -1,0 +1,9 @@
+int potatoes(int p0, int w0, int p1) {
+  int dryWeight = w0 * (100 - p0);
+  return (dryWeight ~/ (100 - p1));
+}
+void main() {
+  print(potatoes(99, 100, 98)); 
+  print(potatoes(75, 203, 71)); 
+
+}
