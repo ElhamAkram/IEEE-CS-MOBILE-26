@@ -1,1 +1,189 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+
+  BoxDecoration boxDecoration() {
+    return BoxDecoration(
+      color: Color(0xffe17e8d),
+      border: Border.all(color: Colors.black, width: 2),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Color(0xffebd2d6),
+        appBar: AppBar(
+          backgroundColor: Color(0xff545770),
+          title: Text(
+            "Task 7",
+            style: TextStyle(color: Colors.black),
+          ),
+          actions: [
+            Icon(Icons.favorite_border),
+            SizedBox(width: 15),
+          ],
+        ),
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Column(
+              children: [
+
+                // Profile
+                Container(
+                  padding: EdgeInsets.all(12),
+                  decoration: boxDecoration(),
+                  child: Row(
+                    children: [
+                      Icon(Icons.person, size: 50, color: Color(0xff545770)),
+                      SizedBox(width: 15),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Elham Akram Mahdy",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(height: 5),
+                          Text(
+                            "Software Engineer",
+                            style: TextStyle(color: Colors.black),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+
+                SizedBox(height: 15),
+
+                // Quote
+                Container(
+                  padding: EdgeInsets.all(20),
+                  decoration: boxDecoration(),
+                  child: Center(
+                    child: Text(
+                      "Time has a way of showing us what really matters.",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontStyle: FontStyle.italic,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                ),
+
+                SizedBox(height: 15),
+
+                // Rating
+                Container(
+                  padding: EdgeInsets.all(15),
+                  decoration: boxDecoration(),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.star, color: Colors.orange),
+                          Icon(Icons.star, color: Colors.orange),
+                          Icon(Icons.star, color: Colors.orange),
+                          Icon(Icons.star, color: Colors.orange),
+                          Icon(Icons.star_border, color: Colors.orange),
+                        ],
+                      ),
+                      Text(
+                        "150 Reviews",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Icon(Icons.share, color: Color(0xff545770)),
+                    ],
+                  ),
+                ),
+
+                SizedBox(height: 15),
+
+                // Information
+                Container(
+                  padding: EdgeInsets.all(15),
+                  decoration: boxDecoration(),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+
+                      Column(
+                        children: [
+                          Icon(Icons.code, color: Color(0xff545770)),
+                          SizedBox(height: 5),
+                          Text("EXP:", style: TextStyle(fontWeight: FontWeight.bold)),
+                          SizedBox(height: 5),
+                          Text("-19 Yrs"),
+                        ],
+                      ),
+
+                      Column(
+                        children: [
+                          Icon(Icons.bug_report, color: Color(0xff545770)),
+                          SizedBox(height: 5),
+                          Text("Bugs:", style: TextStyle(fontWeight: FontWeight.bold)),
+                          SizedBox(height: 5),
+                          Text("∞"),
+                        ],
+                      ),
+
+                      Column(
+                        children: [
+                          Icon(Icons.coffee, color: Colors.brown),
+                          SizedBox(height: 5),
+                          Text("COFFEE:", style: TextStyle(fontWeight: FontWeight.bold)),
+                          SizedBox(height: 5),
+                          Text("∞"),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+
+                SizedBox(height: 15),
+
+                // Hobbies
+                Container(
+                  width: double.infinity,
+                  padding: EdgeInsets.all(15),
+                  decoration: boxDecoration(),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.gps_fixed, color: Colors.red),
+                          SizedBox(width: 5),
+                          Text(
+                            "My Hobbies:",
+                            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 10),
+                      Text("1. Sleeping"),
+                      Text("2. picnic"),
+                      Text("3. Sleeping again"),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 
