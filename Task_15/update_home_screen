@@ -9,12 +9,14 @@ import 'add_tasks_screen.dart';
 import 'archive_screen.dart';
 import 'done_screen.dart';
 
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
+
 
 class _HomeScreenState extends State<HomeScreen> {
   final NotchBottomBarController _controller = NotchBottomBarController(
@@ -92,6 +94,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
+
+
+
             child: FloatingActionButton(
               onPressed: () async {
                 if (isBottomSheetShow) {
@@ -103,6 +108,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           date: _dateController.text,
                           status: "status",
                         )
+
+
                         .then((value) {
                           Navigator.pop(context);
                           isBottomSheetShow = false;
@@ -136,6 +143,9 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           ),
+
+
+
           bottomNavigationBar: AnimatedNotchBottomBar(
             color: const Color.fromARGB(255, 76, 75, 75),
             notchBottomBarController: _controller,
